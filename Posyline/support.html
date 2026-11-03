@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Posyline — Technical Support</title>
+  <style>
+    :root {
+      --bg: #fff5f0;
+      --card: #fffcfa;
+      --text: #453029;
+      --muted: #736158;
+      --accent: #9d6356;
+      --border: #f2e0d6;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 22px;
+      box-shadow: 0 4px 16px rgba(157, 99, 86, 0.06);
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 16px;
+      color: var(--accent);
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 20px 0 8px;
+      color: var(--text);
+    }
+    p { margin: 0 0 12px; }
+    ul, ol {
+      margin: 0 0 12px;
+      padding-left: 1.25rem;
+    }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Posyline</h1>
+      <p class="subtitle">Technical Support</p>
+      <p class="updated">Last updated: November 2026</p>
+    </header>
+
+    <main>
+      <h2>Technical Support</h2>
+
+      <p>Posyline is a personal, on-device floral journal. This page covers common questions and how to reach us if you need help.</p>
+
+      <h3>1. Before You Write</h3>
+      <p>Most issues are resolved on your device without sending us your journal content. When you email us, please include:</p>
+      <ul>
+        <li>Your iPhone or iPad model and iOS version</li>
+        <li>Posyline version (shown on the About screen)</li>
+        <li>A short description of what you expected vs. what happened</li>
+        <li>Screenshots if they help (optional)</li>
+      </ul>
+      <p><strong>Do not attach your full JSON backup</strong> unless we explicitly ask for a redacted sample. Backups may contain personal photos and notes.</p>
+
+      <h3>2. Backup &amp; Restore</h3>
+      <ul>
+        <li>Open <strong>Profile → Backup &amp; restore → Export everything</strong> to save a JSON file to Files or cloud storage you control.</li>
+        <li>Use <strong>Restore from file</strong> only when you intend to replace or merge data on this device. Restore runs locally after you pick a file.</li>
+        <li>If export fails, check available storage and try again. If import fails, confirm the file is a Posyline backup JSON from this app.</li>
+      </ul>
+
+      <h3>3. Photos &amp; Permissions</h3>
+      <ul>
+        <li>Photo Library access is requested only when you add or save images. If import is blocked, enable Photos for Posyline in <strong>Settings → Posyline</strong>.</li>
+        <li>The app does not use the camera; images come from your library only.</li>
+      </ul>
+
+      <h3>4. Care Reminders</h3>
+      <ul>
+        <li>Reminders use local notifications. Turn them on in the app and allow notifications for Posyline in iOS Settings.</li>
+        <li>Only one pending care task per arrangement is shown at a time; completing it schedules the next step based on your care settings.</li>
+      </ul>
+
+      <h3>5. Theme &amp; Display</h3>
+      <p>Theme colors are chosen under <strong>Profile → Theme colors</strong> and apply immediately. They are stored locally with your other settings.</p>
+
+      <h3>6. Data on This Device</h3>
+      <p>Your works, recipes, stems, and care tasks stay in the app sandbox. Uninstalling Posyline may delete local data. Keep exports of anything important.</p>
+
+      <h3>7. Privacy</h3>
+      <p>We do not operate user accounts or upload your journal to our servers. For details, see the in-app Privacy policy.</p>
+
+      <h3>8. Contact Us</h3>
+      <p>For technical questions, bug reports, or feature feedback:</p>
+      <p><a href="mailto:support@posyline.com"><strong>support@posyline.com</strong></a></p>
+      <p>We aim to reply within a few business days. Support is provided in English; you may write in other languages and we will do our best to help.</p>
+    </main>
+
+    <footer>
+      © Posyline · On-device first
+    </footer>
+  </div>
+</body>
+</html>
