@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Support</title>
+  <style>
+    :root {
+      --text: #4a433e;
+      --text-secondary: #6e635a;
+      --accent: #5e544d;
+      --border: #c9bfb0;
+      --card: rgba(242, 237, 230, 0.65);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #ede6dc;
+        --text-secondary: #c9bfb0;
+        --accent: #e5ded2;
+        --border: #6e635a;
+        --card: rgba(74, 67, 62, 0.55);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px 20px 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+      color: var(--text);
+      background: transparent;
+      -webkit-text-size-adjust: 100%;
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .updated {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 28px 0 10px;
+    }
+    p { margin: 0 0 12px; color: var(--text-secondary); }
+    ul, ol {
+      margin: 0 0 12px;
+      padding-left: 1.15em;
+      color: var(--text-secondary);
+    }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); }
+    .summary {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 8px;
+    }
+    .summary p { color: var(--text); margin: 0; }
+    .faq-q { font-weight: 600; color: var(--text); margin: 16px 0 6px; }
+  </style>
+</head>
+<body>
+  <h1>Support</h1>
+  <p class="updated">Last updated: November 5, 2026</p>
+
+  <div class="summary">
+    <p>Need help with <strong>Sartra</strong>? Check the topics below or email <a href="mailto:support@sartra.com">support@sartra.com</a>. We usually reply within a few business days.</p>
+  </div>
+
+  <h2>Requirements</h2>
+  <ul>
+    <li>iPhone with <strong>iOS 16</strong> or later</li>
+    <li>Portrait orientation (recommended)</li>
+    <li>Optional: camera and photo library access for adding images</li>
+  </ul>
+
+  <h2>FAQ</h2>
+
+  <p class="faq-q">Where is my data stored?</p>
+  <p>Photos, closet items, outfits, and diary entries are saved on your device. Sartra does not sync them to our servers by default. Use <strong>Settings → Export / Backup</strong> to create a copy you control.</p>
+
+  <p class="faq-q">How do I back up or move to a new phone?</p>
+  <p>Export a JSON backup from Settings and keep the file in Files or iCloud Drive. On the new device, install Sartra and use <strong>Import</strong> to restore. For a printable overview, try wardrobe PDF export.</p>
+
+  <p class="faq-q">Weather tags are missing or wrong</p>
+  <p>Diary weather suggestions need a network connection and location permission for forecast lookup (via Open-Meteo). You can still add or edit tags manually offline.</p>
+
+  <p class="faq-q">Photos won’t import or save</p>
+  <p>Open <strong>Settings → Sartra</strong> on iOS and allow Camera and Photos. If you denied access earlier, enable it there and restart the app.</p>
+
+  <p class="faq-q">Insights look empty</p>
+  <p>Insights need items in your closet and diary entries that reference outfits or pieces. Add a few items, log a couple of days, then open the Insights tab again.</p>
+
+  <p class="faq-q">How do I reset everything?</p>
+  <p>Settings includes a clear-data option with confirmation steps. This removes local Sartra data on the device; export first if you need a backup.</p>
+
+  <h2>Reporting a problem</h2>
+  <p>When you email support, please include:</p>
+  <ol>
+    <li>iPhone model and iOS version</li>
+    <li>Sartra version (Settings → About)</li>
+    <li>What you expected vs. what happened</li>
+    <li>Screenshots if possible (no need to send private photos)</li>
+  </ol>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:support@sartra.com">support@sartra.com</a></p>
+</body>
+</html>
