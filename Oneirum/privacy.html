@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oneirum — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Oneirum, an offline dream journal for iPhone.">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function setLang(code) {
+      document.querySelectorAll('[lang-section]').forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('lang-section') === code);
+      });
+      document.querySelectorAll('.lang-nav a').forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('data-lang') === code);
+      });
+      document.documentElement.lang = code === 'zh' ? 'zh-Hans' : 'en';
+      try { localStorage.setItem('oneirum_web_lang', code); } catch (e) {}
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var saved = 'en';
+      try { saved = localStorage.getItem('oneirum_web_lang') || saved; } catch (e) {}
+      var nav = navigator.language || '';
+      if (!localStorage.getItem('oneirum_web_lang') && nav.toLowerCase().startsWith('zh')) saved = 'zh';
+      setLang(saved);
+      document.querySelectorAll('.lang-nav a').forEach(function (a) {
+        a.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          setLang(a.getAttribute('data-lang'));
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Oneirum</div>
+      <p class="tagline" data-i18n="subtitle">Privacy Policy</p>
+      <nav class="lang-nav" aria-label="Language">
+        <a href="#" data-lang="en" class="active">English</a>
+        <a href="#" data-lang="zh">简体中文</a>
+      </nav>
+    </header>
+
+    <p class="meta">Last updated: October 29, 2026 · Effective date: October 29, 2026</p>
+
+    <div lang-section="en" class="active">
+      <section class="card hero">
+        <h1>On device · You control it</h1>
+        <p>Oneirum is an offline dream journal. Your dreams belong to you and this iPhone.</p>
+      </section>
+
+      <section class="card">
+        <h2>Storage</h2>
+        <p>Dream text, tags, moods, series, images, and sketches are stored locally in the app’s Application Support directory on your device. We do not operate user accounts, cloud sync, or servers that receive your dream content.</p>
+      </section>
+
+      <section class="card">
+        <h2>App lock</h2>
+        <p>App lock is optional. If enabled, a 4-digit PIN unlocks the journal on this device only. The PIN is stored in the system Keychain using platform security APIs. Oneirum does not upload or sync your PIN.</p>
+      </section>
+
+      <section class="card">
+        <h2>Backup &amp; export</h2>
+        <p>You may export a JSON backup or import to merge entries from Settings. Exported files are under your control. Import runs on device only and does not transmit data to us.</p>
+      </section>
+
+      <section class="card">
+        <h2>Notifications &amp; permissions</h2>
+        <p>Dream reminders use local notifications; you can disable them in iOS Settings. Photo access uses the system photo picker and “Add to Photos” only when you save a sketch—each with its own permission prompt. Custom calendar backgrounds are stored on device only.</p>
+      </section>
+
+      <section class="card">
+        <h2>What we don’t do</h2>
+        <ul>
+          <li>We don’t sell dream content or personal data</li>
+          <li>No social feeds or public sharing built into the app</li>
+          <li>No third-party advertising or ad tracking SDKs</li>
+          <li>No registration or login required</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Children</h2>
+        <p>Oneirum is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+      </section>
+
+      <section class="card">
+        <h2>Changes</h2>
+        <p>We may update this policy to reflect app or legal changes. The “Last updated” date at the top will change when we do. Continued use of the app after updates means you accept the revised policy.</p>
+      </section>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <p>Questions about privacy: see our <a href="support.html">Support</a> page for contact details.</p>
+      </section>
+    </div>
+
+    <div lang-section="zh">
+      <section class="card hero">
+        <h1>纯本地 · 由你掌控</h1>
+        <p>Oneirum 是一款离线梦境日记。你的梦只属于你和这台 iPhone。</p>
+      </section>
+
+      <section class="card">
+        <h2>数据存储</h2>
+        <p>梦境文字、标签、情绪、系列、图片与涂鸦均保存在本机 Application Support 目录。不建立用户账号，不进行云同步，也不会把梦境内容上传到我们的服务器。</p>
+      </section>
+
+      <section class="card">
+        <h2>应用锁</h2>
+        <p>应用锁为可选功能，使用你设置的 4 位 PIN，仅用于在本机解锁查看日记。PIN 以加密形式保存在系统钥匙串，Oneirum 不会上传或同步 PIN。</p>
+      </section>
+
+      <section class="card">
+        <h2>备份与导出</h2>
+        <p>你可以在「我的」中导出 JSON 备份或导入合并记录。导出文件由你自行保存或分享；导入仅在本地合并，不会联网传输。</p>
+      </section>
+
+      <section class="card">
+        <h2>通知与权限</h2>
+        <p>记梦提醒使用本地通知，可在系统设置中随时关闭。从相册选择图片时使用系统照片选择器；将画板保存到相册时会单独请求「添加照片」权限；日历自定义背景图同样只保存在本机。</p>
+      </section>
+
+      <section class="card">
+        <h2>我们不做的事</h2>
+        <ul>
+          <li>不出售梦境或个人信息</li>
+          <li>不提供社交或公开分享功能</li>
+          <li>不嵌入第三方广告追踪</li>
+          <li>不要求注册或登录</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>儿童</h2>
+        <p>Oneirum 并非面向 13 岁以下儿童。我们不会故意收集儿童的个人信息。</p>
+      </section>
+
+      <section class="card">
+        <h2>政策变更</h2>
+        <p>我们可能因应用或法规变化更新本说明，并在页首更新「Last updated」日期。更新后继续使用即表示你接受修订后的政策。</p>
+      </section>
+
+      <section class="card">
+        <h2>联系我们</h2>
+        <p>隐私相关问题请通过<a href="support.html">技术支持</a>页面与我们联系。</p>
+      </section>
+    </div>
+
+    <footer>
+      <a href="support.html">Technical Support</a>
+      ·
+      <a href="privacy.html">Privacy Policy</a>
+    </footer>
+  </div>
+</body>
+</html>

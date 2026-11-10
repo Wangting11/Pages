@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oneirum — Support</title>
+  <meta name="description" content="Technical support for Oneirum dream journal on iPhone.">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function setLang(code) {
+      document.querySelectorAll('[lang-section]').forEach(function (el) {
+        el.classList.toggle('active', el.getAttribute('lang-section') === code);
+      });
+      document.querySelectorAll('.lang-nav a').forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('data-lang') === code);
+      });
+      document.documentElement.lang = code === 'zh' ? 'zh-Hans' : 'en';
+      try { localStorage.setItem('oneirum_web_lang', code); } catch (e) {}
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var saved = 'en';
+      try { saved = localStorage.getItem('oneirum_web_lang') || saved; } catch (e) {}
+      var nav = navigator.language || '';
+      if (!localStorage.getItem('oneirum_web_lang') && nav.toLowerCase().startsWith('zh')) saved = 'zh';
+      setLang(saved);
+      document.querySelectorAll('.lang-nav a').forEach(function (a) {
+        a.addEventListener('click', function (ev) {
+          ev.preventDefault();
+          setLang(a.getAttribute('data-lang'));
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Oneirum</div>
+      <p class="tagline">Technical Support</p>
+      <nav class="lang-nav" aria-label="Language">
+        <a href="#" data-lang="en" class="active">English</a>
+        <a href="#" data-lang="zh">简体中文</a>
+      </nav>
+    </header>
+
+    <div lang-section="en" class="active">
+      <section class="card hero">
+        <h1>We’re here to help</h1>
+        <p>Oneirum is an offline dream journal for iPhone. For bugs, feedback, or privacy questions, contact us by email.</p>
+      </section>
+
+      <section class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:help@oneiric.com">help@oneiric.com</a></p>
+        <p>We aim to reply within 3–5 business days.</p>
+      </section>
+
+      <section class="card">
+        <h2>System requirements</h2>
+        <ul>
+          <li>iPhone with iOS 15.0 or later</li>
+          <li>Free storage for text, images, and sketches</li>
+          <li>Optional: notification permission for dream reminders; photo library access for images and saving sketches</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>FAQ</h2>
+        <p><strong>Where is my data stored?</strong><br>
+        On your device only, in the app’s private storage. See our <a href="privacy.html">Privacy Policy</a>.</p>
+        <p><strong>How do I back up my dreams?</strong><br>
+        Open <em>Me</em> → <em>Export backup</em> to save a JSON file. Keep copies in Files or iCloud Drive. Photos and sketches remain in the app folder on the device.</p>
+        <p><strong>I forgot my app lock PIN.</strong><br>
+        Oneirum cannot recover your PIN. You may turn off app lock only if you still know the PIN, or remove and reinstall the app (this deletes local data unless you have a JSON export).</p>
+        <p><strong>How do I delete all data?</strong><br>
+        Delete the app from your iPhone, or delete individual dream entries inside the app.</p>
+        <p><strong>Import backup failed.</strong><br>
+        Ensure the file is JSON exported from Oneirum and not modified by other tools.</p>
+      </section>
+
+      <section class="card">
+        <h2>Reporting issues</h2>
+        <p>When emailing support, please include:</p>
+        <ul>
+          <li>iOS version (Settings → General → About)</li>
+          <li>Oneirum version (Me → About us)</li>
+          <li>Steps to reproduce the problem</li>
+          <li>Screenshots if helpful (avoid sharing private dream content unless you choose to)</li>
+        </ul>
+      </section>
+    </div>
+
+    <div lang-section="zh">
+      <section class="card hero">
+        <h1>需要帮助？</h1>
+        <p>Oneirum 是 iPhone 上的离线梦境日记。如有故障、建议或隐私疑问，请通过邮件联系我们。</p>
+      </section>
+
+      <section class="card">
+        <h2>联系方式</h2>
+        <p>邮箱：<a href="mailto:help@oneiric.com">help@oneiric.com</a></p>
+        <p>我们通常会在 3–5 个工作日内回复。</p>
+      </section>
+
+      <section class="card">
+        <h2>系统要求</h2>
+        <ul>
+          <li>iPhone，iOS 15.0 或更高版本</li>
+          <li>足够空间存放文字、图片与涂鸦</li>
+          <li>可选：记梦提醒需通知权限；相册图片与保存画板需相应照片权限</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>常见问题</h2>
+        <p><strong>数据存在哪里？</strong><br>
+        仅保存在本机应用私有目录。详见<a href="privacy.html">隐私说明</a>。</p>
+        <p><strong>如何备份？</strong><br>
+        打开「我的」→「导出备份」获得 JSON 文件，可自行存到「文件」或 iCloud 盘。图片与涂鸦仍在应用本地目录。</p>
+        <p><strong>忘记了应用锁 PIN？</strong><br>
+        无法找回 PIN。若仍记得 PIN 可在应用内修改或关闭应用锁；否则只能删除并重装应用（未导出 JSON 时本地数据会丢失）。</p>
+        <p><strong>如何删除全部数据？</strong><br>
+        从 iPhone 删除应用，或在应用内逐条删除梦境。</p>
+        <p><strong>导入备份失败？</strong><br>
+        请确认文件为 Oneirum 导出的 JSON，且未被其他工具改坏。</p>
+      </section>
+
+      <section class="card">
+        <h2>反馈问题时请提供</h2>
+        <ul>
+          <li>iOS 版本（设置 → 通用 → 关于本机）</li>
+          <li>Oneirum 版本（我的 → 关于我们）</li>
+          <li>问题复现步骤</li>
+          <li>必要时附截图（请勿在未经同意的情况下发送私密梦境内容）</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <a href="privacy.html">Privacy Policy</a>
+      ·
+      <a href="support.html">Technical Support</a>
+    </footer>
+  </div>
+</body>
+</html>
