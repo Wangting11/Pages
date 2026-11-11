@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Tintelle Support — contact us and frequently asked questions." />
+  <title>Tintelle · Support</title>
+  <style>
+    :root {
+      --bg: #faf8f6;
+      --card: #ffffff;
+      --text: #1c1c1e;
+      --muted: #636366;
+      --accent: #c44a2a;
+      --border: #e8e4e0;
+      --radius: 14px;
+      --max: 42rem;
+      --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+    }
+    header {
+      padding: 2.5rem 1.25rem 1.5rem;
+      text-align: center;
+      background: linear-gradient(165deg, #e85d4f 0%, #c44a2a 45%, #9a3412 100%);
+      color: #fff;
+    }
+    header h1 { margin: 0 0 0.35rem; font-size: 1.65rem; font-weight: 600; letter-spacing: -0.02em; }
+    header p { margin: 0; opacity: 0.92; font-size: 0.95rem; }
+    nav.links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+      font-size: 0.875rem;
+    }
+    nav.links a { color: rgba(255,255,255,0.95); text-decoration: underline; text-underline-offset: 3px; }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 3rem;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem;
+      margin-bottom: 1.25rem;
+      text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .contact-card a.mail {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      background: linear-gradient(135deg, #e85d4f, #c44a2a);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    article {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.35rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    h2 { font-size: 1.05rem; margin: 0 0 0.75rem; }
+    details {
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 0;
+    }
+    details:last-child { border-bottom: none; padding-bottom: 0; }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--accent); font-size: 1.1rem; font-weight: 400; }
+    details[open] summary::after { content: "−"; }
+    details p { margin: 0.65rem 0 0; color: #2c2c2e; font-size: 0.95rem; }
+    .note { font-size: 0.875rem; color: var(--muted); margin-top: 1rem; }
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 0 1rem 2rem;
+    }
+    a { color: var(--accent); }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0d0f;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --muted: #98989d;
+        --border: #38383a;
+      }
+      details p { color: #e5e5ea; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Support</h1>
+    <p>Tintelle · Help, feedback, and FAQ</p>
+    <nav class="links" aria-label="Related pages">
+      <a href="privacy.html">Privacy Policy</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-card">
+      <p>Need help, found a bug, or have a feature idea? We’re happy to hear from you.</p>
+      <a class="mail" href="mailto:support@huelette.com?subject=Tintelle%20Support">support@huelette.com</a>
+      <p class="note">
+        Please include your device model, iOS version, and Tintelle version (Settings → About Tintelle).
+      </p>
+    </section>
+
+    <article>
+      <h2>Frequently asked questions</h2>
+
+      <details>
+        <summary>Where is my data stored? Is it synced to the cloud?</summary>
+        <p>
+          Palettes, swatches, sequences, and reference images stay in the app sandbox on your device.
+          They are <strong>not</strong> uploaded to our servers. There is no iCloud or multi-device sync today.
+          Uninstalling the app removes local data—use CSV export or saved posters if you need a copy.
+        </p>
+      </details>
+
+      <details>
+        <summary>Why does Tintelle need Photos access?</summary>
+        <p>
+          Read access lets you pick images from your library to sample colors.
+          Write access lets you save exported swatch cards or palette posters to Photos.
+          You can change permissions under iOS Settings → Tintelle → Photos.
+        </p>
+      </details>
+
+      <details>
+        <summary>Does CSV export back up everything?</summary>
+        <p>
+          No. CSV is a spreadsheet-friendly snapshot of swatches, palettes, and sequences.
+          It does <strong>not</strong> include reference image files, and the App cannot restore a full library from CSV alone.
+          Full import and backup are planned for a future update.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I delete all my data?</summary>
+        <p>
+          Open Tintelle → Settings (gear) → <strong>Clear all records</strong>, then confirm.
+          This removes all records and related image files on this device.
+        </p>
+      </details>
+
+      <details>
+        <summary>What do Capture, Play, and Palettes do?</summary>
+        <p>
+          <strong>Capture</strong> — sample from photos, Gallery inspiration, or Manual HSV, with a shared color tray.<br />
+          <strong>Play</strong> — turn a palette into a looping fullscreen color sequence (optional gentle sound).<br />
+          <strong>Palettes</strong> — manage swatches and palettes, reference images, reordering, and poster export.
+        </p>
+      </details>
+
+      <details>
+        <summary>Is Tintelle a health or medical app?</summary>
+        <p>
+          No. Tintelle is a creative color tool. It is <strong>not</strong> a medical, mental health, or wellness application.
+          Notes are for personal reference only.
+        </p>
+      </details>
+    </article>
+
+    <article>
+      <h2>System requirements</h2>
+      <p>
+        Tintelle requires <strong>iOS 15</strong> or later. The UI supports iPhone and iPad in portrait and landscape.
+        If something looks wrong or the app crashes, try force-quitting and reopening, or install the latest version from the App Store before contacting support.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <p>© Tintelle · <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
